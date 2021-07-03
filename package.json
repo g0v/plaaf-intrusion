@@ -1,0 +1,15 @@
+{
+  "name": "plaaf-intrusion",
+  "version": "1.0.0",
+  "description": "China annoying",
+  "main": "index.js",
+  "author": "chihao",
+  "license": "MIT",
+  "scripts": {
+    "start": "node scraper.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.10"
+  }
+}
