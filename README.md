@@ -1,0 +1,4 @@
+- 2020/9/17 開始，中華民國國防部公告關於中共軍機進入我國空域的紀錄
+- 資料來源 = https://www.mnd.gov.tw/PublishTable.aspx?Types=即時軍事動態&title=國防消息
+- 資料在 `data/reports.jsonl` 1 行 1 則公告
+- scraper 在 `scraper.js`
