@@ -4,6 +4,16 @@ const path = require('path')
 const fs = require('fs')
 const readline = require('readline')
 
+function datetime(date) {
+  const y = date.getFullYear()
+  const m = date.getMonth() + 1
+  const d = date.getDate()
+  const h = date.getHours()
+  const mm = ('0' + date.getMinutes()).slice(-2)
+  const ss = ('0' + date.getSeconds()).slice(-2)
+  return `${y}/${m}/${d} ${h}:${mm}:${ss}`
+}
+
 function wait(s) {
   return new Promise(resolve => setTimeout(() => resolve(), s * 1000))
 }
@@ -85,6 +95,7 @@ async function bruteForceInRangeURLs() {
 
   for(let p = min + 1; p <= max; p++) {
     console.log(p)
+    const time = new Date()
     let url, html
     try {
       const base = 'https://www.mnd.gov.tw/Publish.aspx'
@@ -115,6 +126,7 @@ async function bruteForceInRangeURLs() {
           p,
           url,
           publishedAt,
+          archivedAt: datetime(time),
           title,
           links,
           text
