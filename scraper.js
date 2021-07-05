@@ -82,14 +82,13 @@ const aboutPLAAFInstrusion = [
   '西南防空識別區'
 ]
 
-async function bruteForceInRangeURLs() {
+async function bruteForceInRangeURLs(max = 78854) {
   const [ pidList ] = await readReports()
   const pidMin = Math.min(...pidList)
   const pidMax = Math.max(...pidList)
   console.log(pidList.length, 'reports pID from', pidMin, 'to', pidMax)
 
   const min = pidMax
-  const max = 78854 // 78852
   console.log(max, 'max')
   console.log(max - min, 'urls to try...')
 
@@ -147,4 +146,8 @@ async function bruteForceInRangeURLs() {
   fs.appendFileSync('log', [min, max, d].join(' ') + '\n')
 }
 
-bruteForceInRangeURLs()
+const args = process.argv.slice(2)
+const max = parseInt(args[0])
+if(!isNaN(max)) {
+  bruteForceInRangeURLs(max)
+}
