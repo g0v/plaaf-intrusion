@@ -2,3 +2,8 @@
 - 資料來源 = https://www.mnd.gov.tw/PublishTable.aspx?Types=即時軍事動態&title=國防消息
 - 資料在 `data/reports.jsonl` 1 行 1 則公告
 - scraper 在 `scraper.js`
+- 執行 scraper
+  - 到[即時軍事動態](https://www.mnd.gov.tw/PublishTable.aspx?Types=即時軍事動態&title=國防消息)
+  - 點選最新公告
+  - 紀錄 `p`
+  - `npm start {p}`
