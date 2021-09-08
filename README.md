@@ -5,5 +5,5 @@
 - 執行 scraper
   - 到[即時軍事動態](https://www.mnd.gov.tw/PublishTable.aspx?Types=即時軍事動態&title=國防消息)
   - 點選最新公告
-  - 紀錄 `p`
-  - `npm start {p}`
+  - 紀錄 query 參數 `p`
+  - 執行 `npm start {p}`
